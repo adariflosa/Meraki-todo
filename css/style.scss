@@ -3,9 +3,53 @@
 @import "./base/variables";
 @import "./base/mixins";
 
-.container {
+.todo-app {
+  background-color: $bg;
   display: block;
   font-size: 20px;
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  padding: 28px 14px;
+  width: 50%;
+}
+
+.todo-form {
+  background: $green;
+  border-radius: 10px;
+  height: 103px;
+  margin: auto;
+  padding: 18px 15px;
+  width: 100%;
+  position: relative;
+
+  .todo-form__input {
+    background-color: rgba(white, 0.3);
+    border-radius: 10px 50px 50px 10px;
+    border: none;
+    height: 65px;
+    outline: none;
+    padding: 25px;
+    width: 100%;
+
+    &::placeholder {
+      color: $white;
+      font-family: $primary-font;
+      font-size: 20px;
+    }
+  }
+
+  .todo-form__button {
+    &::after {
+      background-color: $white;
+      border-radius: 50%;
+      color: $green;
+      content: "\e802";
+      font-family: icons;
+      font-size: 40px;
+      line-height: 30px;
+      padding: 18px 22px;
+      position: absolute;
+      right: 2%;
+      top: 18%;
+    }
+  }
 }
